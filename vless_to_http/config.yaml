@@ -1,0 +1,39 @@
+name: VLESS to HTTP
+version: "1.1.0"
+slug: vless_to_http
+description: HTTP/HTTPS and SOCKS5 proxy tunnelled through a VLESS + Reality server
+url: https://github.com/thejohnd0e/VLESS-to-HTTP
+arch:
+  - amd64
+  - aarch64
+init: false
+startup: services
+boot: auto
+ports:
+  "8181/tcp": 8181
+  "1080/tcp": 1080
+ports_description:
+  "8181/tcp": HTTP/HTTPS proxy
+  "1080/tcp": SOCKS5 proxy (TCP only)
+options:
+  vless_links: []
+  log_level: warning
+  proxy_user: ""
+  proxy_pass: ""
+  print_config: false
+  failover_strategy: leastPing
+  probe_url: "https://www.gstatic.com/generate_204"
+  probe_interval: "1m"
+  bypass_list: []
+schema:
+  vless_links:
+    - str
+  log_level: list(debug|info|warning|error|none)
+  proxy_user: str
+  proxy_pass: password
+  print_config: bool
+  failover_strategy: list(leastPing|random|roundRobin)
+  probe_url: str
+  probe_interval: str
+  bypass_list:
+    - str
