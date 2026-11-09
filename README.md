@@ -23,8 +23,9 @@ directly instead of through the tunnel.
    https://github.com/stepler-nn/ha-vless-to-http
    ```
 
-4. Close the dialog, refresh the store, open **VLESS to HTTP** under *Local
-   add-ons* (or the new repository section) and click **Install**.
+4. Close the dialog and refresh the store. The add-on appears under the
+   **VLESS to HTTP Add-ons** repository (or use the store search); open it and
+   click **Install**.
 5. Open the **Configuration** tab, paste one or more `vless://` links into
    `vless_links`, then **Start** the add-on.
 
